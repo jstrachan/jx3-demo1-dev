@@ -1,0 +1,13 @@
+apps:
+- name: jenkins-x/jxboot-helmfile-resources
+- name: external-secrets/kubernetes-external-secrets
+- name: jx-labs/jenkins-x-crds
+- name: stable/nginx-ingress
+- name: jenkins-x/tekton
+- name: jenkins-x/lighthouse
+- name: jenkins-x/nexus
+- name: jenkins-x/chartmuseum
+- name: banzaicloud-stable/vault-operator
+- name: jx-labs/vault-instance
+- name: jx-labs/pusher-wave
+
