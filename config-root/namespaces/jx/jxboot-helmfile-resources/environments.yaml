@@ -31,8 +31,8 @@ spec:
     gitPublic: true
     helmTemplate: true
     kubeProvider: "gke"
-    pipelineUsername: "jenkins-x-labs-bot"
-    pipelineUserEmail: "jenkins-x@googlegroups.com"
+    pipelineUsername: ""
+    pipelineUserEmail: ""
     prowConfig: Scheduler
     importMode: YAML
     promotionEngine: Prow

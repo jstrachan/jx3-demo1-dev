@@ -67,7 +67,7 @@ data:
         - needs-rebase
         repos:
         - jstrachan/jx3-demo1-dev
-      target_url: http://deck.cluster.local
+      target_url: http://deck-jx.35.240.42.197.nip.io
 kind: ConfigMap
 metadata:
   creationTimestamp: null

@@ -1,0 +1,11 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+    name: jenkins-x-crds
+upstream:
+    type: git
+    git:
+        commit: 74a0289e37ab270d7794fc0252a24727b8a52fa9
+        repo: https://github.com/jenkins-x/jxr-versions
+        directory: /apps/jx-labs/jenkins-x-crds
+        ref: master
