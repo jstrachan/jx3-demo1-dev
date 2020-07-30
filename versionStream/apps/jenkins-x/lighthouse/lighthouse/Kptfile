@@ -1,0 +1,11 @@
+apiVersion: kpt.dev/v1alpha1
+kind: Kptfile
+metadata:
+    name: lighthouse
+upstream:
+    type: git
+    git:
+        commit: f7ed87b22744a579a55ab729d457248be3ff95b6
+        repo: https://github.com/jenkins-x/jxr-versions
+        directory: /apps/jenkins-x/lighthouse
+        ref: master
