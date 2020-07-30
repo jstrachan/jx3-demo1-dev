@@ -48,7 +48,6 @@ environments:
       production: false
   key: production
 gitops: true
-helmfile: true
 ingress:
   domain: ""
   externalDNS: false
