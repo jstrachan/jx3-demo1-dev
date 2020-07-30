@@ -14,6 +14,8 @@ cluster:
   gitKind: github
   gitName: github
   gitServer: https://github.com
+  gke:
+    projectNumber: "90706211714"
   namespace: jx
   project: jstrachan-multicluster
   provider: gke
@@ -29,6 +31,8 @@ environments:
       enabled: false
       production: false
   key: dev
+  owner: jstrachan
+  repository: jx3-demo1-dev
 - ingress:
     domain: ""
     externalDNS: false
@@ -49,7 +53,7 @@ environments:
   key: production
 gitops: true
 ingress:
-  domain: ""
+  domain: 35.240.42.197.nip.io
   externalDNS: false
   namespaceSubDomain: -jx.
   tls:

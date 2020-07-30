@@ -1,13 +1,63 @@
 apps:
 - name: jenkins-x/jxboot-helmfile-resources
+  namespace: jx
+  values:
+  - versionStream/apps/jenkins-x/jxboot-helmfile-resources/values.yaml.gotmpl
+  - apps/jxboot-helmfile-resources/values.yaml
+  version: 0.0.255
 - name: external-secrets/kubernetes-external-secrets
+  namespace: vault-infra
+  values:
+  - versionStream/apps/external-secrets/kubernetes-external-secrets/values.yaml.gotmpl
+  version: 4.0.0
 - name: jx-labs/jenkins-x-crds
+  namespace: jx
+  values:
+  - versionStream/apps/jx-labs/jenkins-x-crds/values.yaml
+  version: 0.0.7
 - name: stable/nginx-ingress
+  namespace: nginx
+  values:
+  - versionStream/apps/stable/nginx-ingress/values.yaml.gotmpl
+  version: 1.39.1
 - name: jenkins-x/tekton
+  namespace: jx
+  values:
+  - versionStream/apps/jenkins-x/tekton/values.yaml.gotmpl
+  version: 0.0.56
 - name: jenkins-x/lighthouse
+  namespace: jx
+  values:
+  - versionStream/apps/jenkins-x/lighthouse/values.yaml.gotmpl
+  version: 0.0.683
 - name: jenkins-x/nexus
+  namespace: jx
+  values:
+  - versionStream/apps/jenkins-x/nexus/values.yaml.gotmpl
+  version: 0.1.30
 - name: jenkins-x/chartmuseum
+  namespace: jx
+  values:
+  - versionStream/apps/jenkins-x/chartmuseum/values.yaml.gotmpl
+  version: 1.1.7
 - name: banzaicloud-stable/vault-operator
+  namespace: vault-infra
+  version: 1.3.0
 - name: jx-labs/vault-instance
+  namespace: vault-infra
 - name: jx-labs/pusher-wave
-
+  namespace: jx
+  version: 1.0.0
+repositories:
+- name: jenkins-x
+  url: https://storage.googleapis.com/chartmuseum.jenkins-x.io
+- name: external-secrets
+  url: https://godaddy.github.io/kubernetes-external-secrets
+- name: jx-labs
+  url: https://storage.googleapis.com/jenkinsxio-labs-private/charts
+- name: stable
+  url: https://kubernetes-charts.storage.googleapis.com
+- name: banzaicloud-stable
+  url: https://kubernetes-charts.banzaicloud.com
+values:
+- jx-values.yaml
